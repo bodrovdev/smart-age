@@ -1,47 +1,11 @@
 @use "../mixins";
 
+html {
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-gutter: stable;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-}
-
-.d-flex {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.align-items-center {
-	align-items: center;
-}
-
-.w-100 {
-	width: 100%;
-}
-
-.text-decoration-none {
-	text-decoration: none;
-}
-
-.text-uppercase {
-	text-transform: uppercase;
-}
-
-.position-absolute {
-	position: absolute;
-}
-
-.main-link {
-	height: 50px;
-	padding: 0 30px;
-	border-radius: 200px;
-	background-color: #282828;
-	color: #FFF;
-	font-size: 15px;
-	font-weight: 500;
-	line-height: 110%;
-	transition: 0.2s ease;
-}
-
-.main-link:hover {
-	background-color: #86B4CE;
 }

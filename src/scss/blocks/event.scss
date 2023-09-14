@@ -2,16 +2,29 @@
 
 .event {
   min-height: 910px;
-  background-color: #F2FAFF;
 
-  padding: 120px 0;
+  &__bg {
+    width: 100%;
+    height: fit-content;
+
+    &--one {
+      background: #F2FAFF;
+
+      padding: 120px 0 0 0;
+    }
+
+    &--two {
+      background: linear-gradient(180deg, #F1FAFF 0%, #F4F4F4 100%);
+
+      padding: 0 0 120px 0;
+    }
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    top: 40px;
 
     width: 83%;
 
@@ -37,6 +50,8 @@
     align-items: stretch;
     justify-content: flex-start;
     gap: 10px;
+
+    margin: 0 0 50px 0;
   }
 
   &__column {
@@ -94,13 +109,13 @@
       color: #282828;
       text-transform: uppercase;
 
-      margin: 0 0 28px 0;
+      margin: 0 0 30px 0;
     }
 
     &-details {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 9px;
 
       &-item {
         position: relative;
@@ -111,13 +126,13 @@
         line-height: 16px;
         color: #232323;
 
-        padding: 0 0 0 13px;
+        padding: 0 0 0 20px;
 
         &::before {
           content: "";
           position: absolute;
           top: 50%;
-          left: 0;
+          left: 9px;
 
           width: 2px;
           height: 2px;
@@ -127,6 +142,31 @@
           transform: translateY(-50%);
         }
       }
+    }
+
+    &-label {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 36px;
+      border: 1px solid #FFF;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.30);
+      backdrop-filter: blur(15px);
+
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      color: #FFF;
+      text-transform: uppercase;
+
+      padding: 0 15px;
     }
 
     &--left {
@@ -139,10 +179,70 @@
       padding: 50px 55px;
     }
 
-    &--right {}
+    &--right {
+      position: relative;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    background: #FFF;
+
+    padding: 40px 0 0 0;
+    margin: 0 0 100px 0;
+
+    &-headline,
+    .event__info-subline {
+      display: inline-block;
+
+      max-width: 90%;
+
+      margin: 0 auto;
+    }
+
+    &-headline {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #282828;
+      text-align: center;
+      text-transform: uppercase;
+
+      margin: 0 0 15px 0;
+    }
+
+    &-subline {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      color: #232323;
+      text-align: center;
+
+      margin-bottom: 41px !important;
+    }
   }
 
   &__tabs {
+    &-title {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 36px;
+      color: #86B4CE;
+      text-align: center;
+      text-transform: uppercase;
+
+      margin: 0 0 25px 0;
+    }
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -161,7 +261,10 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      width: 100%;
       height: 50px;
+      background-color: #FFF;
+      border-radius: 25px 25px 0 0;
       overflow: hidden;
       cursor: pointer;
 
@@ -175,10 +278,19 @@
         justify-content: space-between;
 
         width: 100%;
-        min-height: 46px;
-        max-height: 46px;
+        min-height: 50px;
+        box-sizing: border-box;
+        border-radius: 200px;
+        background: #86B4CE;
 
-        padding: 12px 20px;
+        font-family: 'Montserrat', system-ui, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #FFF;
+        text-transform: uppercase;
+
+        padding: 12px 31px;
 
         @include mixins.respond-to(notDesktop) {
           padding: 13px 6px;
@@ -191,6 +303,15 @@
 
       &-content {
         display: inline-block;
+
+        font-family: 'Montserrat', system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #232323;
+        letter-spacing: 0.14px;
+
+        padding: 25px 30px 30px 30px;
       }
     }
   }
