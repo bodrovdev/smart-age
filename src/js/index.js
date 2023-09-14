@@ -1,27 +1,30 @@
-// ? --- Табы на странице мероприятия
-window.addEventListener('load', () => {
-  let event_tabs = document.querySelectorAll('.event__tabs-item');
+// ? --- Табы
+function tabsFunc(rootClassName) {
+  window.addEventListener('load', () => {
+    let tabsList = document.querySelectorAll(`.${rootClassName}__tabs-item`);
 
-  if (event_tabs === null) {
-    return;
-  }
-  else {
-    event_tabs.forEach(item => {
-      let item_content = item.querySelector('.event__tabs-item-content');
-      let item_top = item.querySelector('.event__tabs-item-top');
+    if (tabsList === null) {
+      return;
+    }
+    else {
+      tabsList.forEach(item => {
+        let tabsItemContent = item.querySelector(`.${rootClassName}__tabs-item-content`);
+        let tabsItemTop = item.querySelector(`.${rootClassName}__tabs-item-top`);
 
-
-      item.addEventListener('click', (e) => {
-
-        if (item.classList.contains('event__tabs-item--active')) {
-          item.classList.remove('event__tabs-item--active');
-          item.setAttribute('style', '');
-        }
-        else {
-          item.classList.add('event__tabs-item--active');
-          item.setAttribute(`style`, `height:${item_content.offsetHeight + item_top.offsetHeight}px; transition:height 0.3s;`);
-        }
+        item.addEventListener('click', () => {
+          if (item.classList.contains(`${rootClassName}__tabs-item--active`)) {
+            item.classList.remove(`${rootClassName}__tabs-item--active`);
+            item.setAttribute('style', '');
+          }
+          else {
+            item.classList.add(`${rootClassName}__tabs-item--active`);
+            item.setAttribute(`style`, `height:${tabsItemContent.offsetHeight + tabsItemTop.offsetHeight}px; transition:all 0.3s;`);
+          }
+        })
       })
-    })
-  }
-});
+    }
+  })
+}
+
+tabsFunc('event');
+tabsFunc('shop');

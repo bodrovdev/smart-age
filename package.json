@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@alexlafroscia/postcss-color-mod-function": "^4.0.0",
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
     "babel-loader": "^8.2.5",
@@ -41,11 +40,6 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.18",
-    "aos": "^3.0.0-beta.6",
-    "body-scroll-lock": "^4.0.0-beta.0",
-    "gsap": "^3.11.4",
-    "swiper": "^9.1.0",
-    "tua-body-scroll-lock": "^1.2.1"
+    "swiper": "^9.1.0"
   }
 }

@@ -1,5 +1,15 @@
 import Swiper from 'swiper/bundle';
 
+let regular_slider = new Swiper(".shop__reviews-slider", {
+  direction: "horizontal",
+  spaceBetween: 10,
+
+  navigation: {
+    nextEl: '.shop__reviews-slider-arrow--next',
+    prevEl: '.shop__reviews-slider-arrow--prev',
+  },
+});
+
 // ? Мобильный слайдер
 // var mobile_slider_init = false;
 

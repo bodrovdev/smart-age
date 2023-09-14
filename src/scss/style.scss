@@ -1,8 +1,6 @@
 //Для разработки
 @use 'global/variables';
 @use 'node_modules/swiper/swiper-bundle.min.css';
-@use 'node_modules/aos/dist/aos.css';
-@use 'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -27,5 +25,6 @@
 @use 'blocks/page-footer';
 
 @use 'blocks/main-nav';
-@use 'blocks/modal';@use 'blocks/event';
+@use 'blocks/modal';
+@use 'blocks/event';
 @use 'blocks/shop';
