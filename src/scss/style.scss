@@ -1,3 +1,11 @@
+//Не моё
+@use 'buttons.scss';
+@use 'footer.scss';
+@use 'header.scss';
+@use 'main.scss';
+@use 'media-requests.scss';
+@use 'normalize.scss';
+
 //Для разработки
 @use 'global/variables';
 @use 'node_modules/swiper/swiper-bundle.min.css';
@@ -24,7 +32,6 @@
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
 
-@use 'blocks/main-nav';
-@use 'blocks/modal';
 @use 'blocks/event';
 @use 'blocks/shop';
+@use 'blocks/catalogue';
