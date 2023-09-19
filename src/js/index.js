@@ -88,3 +88,22 @@ window.addEventListener('load', () => {
     }
   })
 });
+
+// ? --- Бегущая строка
+window.addEventListener('load', () => {
+  if (document.querySelector('#marquee') === null) {
+    return;
+  }
+  else {
+
+    $(function () {
+      $('.marquee-1').marquee({
+        delayBeforeStart: -5000,
+        duration: 20000,
+        startVisible: true,
+        duplicated: true
+      });
+    });
+
+  }
+})
