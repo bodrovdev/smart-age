@@ -12,7 +12,7 @@
     &--one {
       background: #F2FAFF;
 
-      padding: 120px 0 0 0;
+      padding: 50px 0 0 0;
       margin: 0 0 40px 0;
     }
 
@@ -58,10 +58,21 @@
   }
 
   &__column {
-    &--left {}
+    &--left {
+      width: 420px;
+      height: 420px;
+      background-color: #fff;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: 50%;
+    }
 
     &--right {
-      width: 100%;
+      width: calc(100% - 430px);
       background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
 
       padding: 56px 70px 14px 70px;
@@ -245,6 +256,12 @@
         color: #232323;
       }
 
+      &-stars {
+        font-size: 0;
+        display: flex;
+        gap: 3px;
+      }
+
       &-star {
         &--active {
           filter: brightness(0) saturate(100%) invert(75%) sepia(55%) saturate(362%) hue-rotate(172deg) brightness(87%) contrast(84%);
@@ -327,6 +344,11 @@
 
           &:first-of-type {
             margin: 0 12px 0 0;
+          }
+
+          &:last-of-type {
+            position: relative;
+            top: 2px;
           }
 
           &--active {

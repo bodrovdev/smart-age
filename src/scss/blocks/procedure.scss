@@ -1,0 +1,71 @@
+@use "../mixins";
+
+.procedure {
+  &__bg {
+    &--one {
+      background: #F2FAFF;
+
+      padding: 50px 0 0 0;
+      padding: 123px 0 0 0;
+    }
+
+    &--two {
+      background: linear-gradient(180deg, #F1FAFF 0%, #F4F4F4 100%);
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: inline-block;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 0 0 40px 0;
+  }
+
+  &__heading {
+    padding: 70px;
+
+    &-top {
+      display: grid;
+      align-items: end;
+      grid-template-columns: calc(50% - 40px) calc(50% - 40px);
+      gap: 40px;
+
+      border-bottom: 1px solid #86B4CE;
+
+      padding: 0 0 30px 0;
+      margin: 0 0 30px 0;
+    }
+
+    &-title {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 36px;
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.14px;
+    }
+
+    &-bottom {
+      display: grid;
+      grid-template-columns: calc(50% - 40px) calc(50% - 40px);
+      gap: 40px;
+    }
+  }
+}
